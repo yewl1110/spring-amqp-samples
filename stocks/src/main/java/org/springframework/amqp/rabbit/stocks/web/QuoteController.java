@@ -86,7 +86,7 @@ public class QuoteController {
 
 	@RequestMapping("/quotes")
 	@ResponseBody
-	public List<Quote> quotes(@RequestParam(required = false) Long timestamp) {
+	public List<Quote> quotes(@RequestParam(value = "timestamp", required = false) Long timestamp) {
 		if (timestamp == null) {
 			timestamp = 0L;
 		}
